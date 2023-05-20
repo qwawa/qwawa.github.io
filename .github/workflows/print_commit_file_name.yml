@@ -15,4 +15,10 @@ jobs:
       
       - name: Print Commit File Name
         run: |
-          git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
+          commit_sha=$(git rev-parse HEAD)
+          output=$(git diff-tree --no-commit-id --name-only -r $commit_sha)
+          echo "::set-output name=file_names::$output"
+      
+      - name: Display Output
+        run: |
+          echo "Commit File Names: ${{ steps.print_commit_file_name.outputs.file_names }}"
