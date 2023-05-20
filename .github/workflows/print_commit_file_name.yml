@@ -16,9 +16,6 @@ jobs:
       - name: Print Commit File Name
         id: commit_files
         run: |
-          output=$(git log -1 --name-only --pretty=format:"%h")
-          echo "::set-output name=file_names::$output"
-      
-      - name: Display Output
-        run: |
-          echo "Commit File Names: ${{ steps.commit_files.outputs.file_names }}"
+          file_names=$(git log -1 --name-only --pretty=format:"%h")
+          echo "Commit File Names:"
+          echo "$file_names"
