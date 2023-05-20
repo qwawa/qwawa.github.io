@@ -1,0 +1,18 @@
+name: Print Commit File Name
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  print_commit_file_name:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Print Commit File Name
+        run: |
+          git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
