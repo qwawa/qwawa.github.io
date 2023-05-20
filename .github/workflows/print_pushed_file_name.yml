@@ -12,6 +12,6 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Print Pushed File Name
-        run:
+        run: 
           echo "Pushed file:"
           git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
