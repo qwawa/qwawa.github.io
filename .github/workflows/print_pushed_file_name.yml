@@ -1,0 +1,20 @@
+name: Print Pushed File Name
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  printFileName:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      
+    - name: Print Changed File Name
+      run:
+        changedFiles=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }})
+        echo "Changed Files:"
+        echo "$changedFiles"
