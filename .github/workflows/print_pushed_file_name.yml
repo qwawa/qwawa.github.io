@@ -1,15 +1,18 @@
-name: Print Pushed File Name
+name: Push Notification
+
 on:
   push:
     branches:
       - main
 
 jobs:
-  print-file-name:
+  notify:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Print Pushed File Name
-        run: echo "Pushed files:" && git diff-tree --no-commit-id --name-only -r HEAD
+      - name: Notify on push
+        run: |
+          git diff --name-only ${{ github.event.before }} ${{ github.event.after }}
