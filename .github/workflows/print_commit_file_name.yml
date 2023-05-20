@@ -15,7 +15,7 @@ jobs:
       
       - name: Print Commit File Name
         id: commit_files
-        run: |
+        run:
           file_names=$(git log -1 --name-only --pretty=format:"%h")
           echo "Commit File Names:"
           echo "$file_names"
