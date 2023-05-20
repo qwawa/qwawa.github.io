@@ -16,10 +16,9 @@ jobs:
       - name: Print Commit File Name
         id: commit_files
         run: |
-          commit_sha=$(git rev-parse HEAD)
-          output=$(git diff-tree --no-commit-id --name-only -r $commit_sha)
-          echo "FILE_NAMES=$output" >> $GITHUB_ENV
+          output=$(git log -1 --name-only --pretty=format:"%h")
+          echo "::set-output name=file_names::$output"
       
       - name: Display Output
         run: |
-          echo "Commit File Names: $FILE_NAMES"
+          echo "Commit File Names: ${{ steps.commit_files.outputs.file_names }}"
