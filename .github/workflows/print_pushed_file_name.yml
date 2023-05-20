@@ -15,4 +15,5 @@ jobs:
 
       - name: Notify on push
         run:
-          git diff-tree --no-commit-id --name-only -r HEAD
+          echo "Pushed files:"
+          echo "::debug::$(git diff-tree --no-commit-id --name-only -r HEAD)"
