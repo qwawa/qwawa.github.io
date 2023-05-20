@@ -1,4 +1,4 @@
-name: Push Notification
+name: Notify File Push
 
 on:
   push:
@@ -10,10 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Notify on push
-        run:
-          echo "Pushed files:"
-          echo "::debug::$(git diff-tree --no-commit-id --name-only -r HEAD)"
+      - name: Display Pushed File Name
+        run: |
+          echo "Pushed File: ${{ github.event.head_commit.modified[0] }}"
