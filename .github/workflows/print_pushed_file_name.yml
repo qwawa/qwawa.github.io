@@ -1,20 +1,17 @@
 name: Print Pushed File Name
-
 on:
   push:
     branches:
       - main
 
 jobs:
-  printFileName:
+  print-file-name:
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-      
-    - name: Print Changed File Name
-      run:
-        changedFiles=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }})
-        echo "Changed Files:"
-        echo "$changedFiles"
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        
+      - name: Print Pushed File Name
+        run: |
+          echo "Pushed files:"
+          git show --name-only --pretty="" ${{ github.sha }} 코드 분석
