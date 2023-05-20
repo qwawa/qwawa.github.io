@@ -14,4 +14,4 @@ jobs:
       - name: Print Pushed File Name
         run: |
           echo "Pushed files:"
-          git show --name-only --pretty="" ${{ github.sha }} 코드 분석
+          git show --name-only --pretty="" ${{ github.sha }}
