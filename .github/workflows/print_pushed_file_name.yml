@@ -1,21 +1,17 @@
-name: Notify File Push
-
+name: Print Pushed File Name
 on:
   push:
     branches:
       - main
 
 jobs:
-  notify:
+  print-file-name:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Display Pushed Files
+      - name: Print Pushed File Name
         run: |
-          echo "Pushed Files:"
-          for file in ${{ github.event.head_commit.modified }}; do
-            echo "- $file"
-          done
+          echo "Pushed file:"
+          git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
