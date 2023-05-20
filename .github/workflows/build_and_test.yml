@@ -1,34 +1,24 @@
-name: New File Notification
+name: Latest Added File
 
 on:
   push:
-    paths-ignore:
-      - '**.md' # Markdown 파일은 무시하고 처리하지 않음
     branches:
       - main
 
 jobs:
-  new-file-notification:
+  latest-added-file:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: List new files
-        id: list-files
+      - name: Get latest added file
+        id: latest-file
         run: |
-          git diff --name-only HEAD^..HEAD | while read -r file; do
-            echo "::set-output name=new_files::$file"
-          done
+          git diff --name-only --diff-filter=A HEAD^..HEAD | head -n 1
+          echo "::set-output name=latest_file::$(git diff --name-only --diff-filter=A HEAD^..HEAD | head -n 1)"
 
-      - name: Get new file names
-        id: get-file-names
+      - name: Show latest added file
         run: |
-          echo "New files:"
-          echo "${{ steps.list-files.outputs.new_files }}"
-
-      - name: Send notification
-        run: |
-          echo "Send notification with the new file names"
-          # 여기에서 실제 알림을 보내는 작업을 수행하면 됩니다
+          echo "Latest added file: ${{ steps.latest-file.outputs.latest_file }}"
