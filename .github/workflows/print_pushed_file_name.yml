@@ -13,6 +13,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Display Pushed File Name
+      - name: Display Pushed Files
         run: |
-          echo "Pushed File: ${{ github.event.head_commit.modified[0] }}"
+          echo "Pushed Files:"
+          for file in ${{ github.event.head_commit.modified }}; do
+            echo "- $file"
+          done
