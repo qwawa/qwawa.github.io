@@ -9,7 +9,7 @@ def main(target_process, addr, size):
 	script = session.create_script("""
 	"use strict";
 	
-	const PROCESS_VM_READ = 0x0010;
+	const PROCESS_VM_READ = 0x0010; 
 	
 	var pid = %d;
 	var addr = ptr('0x%x'); 
