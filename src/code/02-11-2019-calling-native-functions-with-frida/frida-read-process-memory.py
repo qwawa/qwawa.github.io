@@ -7,7 +7,7 @@ def on_message(message, data):
 def main(target_process, addr, size):
 	session = frida.attach(target_process)
 	script = session.create_script("""
-	"use strict";
+	"use strict"; 
 	
 	const PROCESS_VM_READ = 0x0010;
 	
