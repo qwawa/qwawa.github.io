@@ -1,7 +1,6 @@
 ## <center>qwawa's homepage!</center>
 
 
-
 ## Introduction
  - Hello, I'm qwawa, a student studying programming at Sungkyunkwan University.
  - Career: KOI Award (2018) / Baekjoon - Gold 2 / Admission to SSKU (2020)
