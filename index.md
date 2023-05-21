@@ -1,11 +1,11 @@
-## Welcome to the jungle!
+## qwawa's homepage!
 
 ![](http://poxiran.com.ar/img/home.jpg)
 
-## Publications
+## Introduction
+ - Hello, I'm qwawa, a student studying programming at Sungkyunkwan University.
+ - Career: KOI Award (2018) / Baekjoon - Gold 2 / Admission to SSKU (2020)
+ - Educational Background: GSHS (2017 ~ 2019) / SKKU (2020 ~ current)
 
- - [[For beginners] Using IDAPython to fix Coronalock (BigLock) IAT references in IDA](./src/pages/21-08-2020-using-idapython-to-fix-coronalock-iat.md)
- - [Calling native function with Frida](./src/pages/02-11-2019-calling-native-functions-with-frida.md)
- - [Unpacking Malware Series - Maze Ransomware](./src/pages/22-10-2019-unpacking-malware-series-maze-ransomware.md)
- -  [Unpacking Malware Series - Fixing the (tiny) IAT redirection in Dharma ransomware](./src/pages/30-09-2019-unpacking-malware-series-fixing-the-tiny-dharma-iat-redirection.md)
- - [Previous publications on Unpacking Malware Series](https://crackinglandia.wordpress.com/tag/unpacking/)
+## Skills
+ - C, C++, C#, Java, Python / GPT model, Data preprocessing, AI
