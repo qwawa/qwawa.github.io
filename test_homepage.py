@@ -5,4 +5,4 @@ def test_homepage_load():
 
     response = requests.get(url)
     assert response.status_code == 200
-    assert 'Welcome to My Website' in response.text
+    assert 'qwawa.github.io' in response.text
