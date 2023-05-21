@@ -1,4 +1,4 @@
-## qwawa's homepage!
+## <center>qwawa's homepage!</center>
 
 ![](http://poxiran.com.ar/img/home.jpg)
 
