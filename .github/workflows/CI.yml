@@ -25,10 +25,10 @@ jobs:
 
       - name: Run Tests
         run: |
-          changed_files=$(git diff --name-only HEAD~1 HEAD)
-          for file in $changed_files; do
+          git diff-tree --no-commit-id --name-only -r HEAD | while read file; do
             if [[ "$file" == src/code/*/*.py ]]; then
-              python "$file"
+              python "src/code/$file"
             fi
           done
+
 
