@@ -1,28 +1,23 @@
-name: CI
+name: Jekyll CI
 
 on:
-  push:
-    branches:
-      - main
+  push
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
+  jekyll:
+    runs-on: ubuntu-16.04
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '2.7' # Replace with your desired Ruby version
+    # Use GitHub Actions' cache to shorten build times and decrease load on servers
+    - uses: actions/cache@v1
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
 
-      - name: Install Bundler
-        run: gem install bundler
-
-      - name: Install dependencies
-        run: bundle install
-
-      - name: Build Jekyll site
-        run: bundle exec jekyll build
+    # Standard usage
+    - uses:  helaili/jekyll-action@2.0.3
+      env:
+        JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
