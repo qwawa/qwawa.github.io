@@ -32,4 +32,4 @@ jobs:
           python -m pytest
         else
          echo "No Python file changes. Skipping tests."
-        f
+        fi
