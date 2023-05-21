@@ -16,9 +16,9 @@
  - Academic: System programming, Java practice, open source practice... etc
 
 ## Acheievements and Certificaions
- - Maze Game Solo Development
- - KOI Award
- - Science Exhibition Award
+ - KOI Award (2018)
+ - Science Exhibition Award (2018)
+ - Maze Game Solo Development (2019)
 
 ## Contact
  - Email Adress: parkminho@g.skku.edu
