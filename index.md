@@ -1,6 +1,6 @@
 ## <center>qwawa's homepage!</center>
 
-![](http://poxiran.com.ar/img/home.jpg)
+
 
 ## Introduction
  - Hello, I'm qwawa, a student studying programming at Sungkyunkwan University.
