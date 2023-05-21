@@ -12,7 +12,7 @@ def main(target_process, addr, size):
 	const PROCESS_VM_READ = 0x0010;
 	
 	var pid = %d;
-	var addr = ptr('0x%x');
+	var addr = ptr('0x%x'); 
 	var size = %d;
 	
 	var openProcessAddr = Module.findExportByName('Kernel32.dll', 'OpenProcess');
