@@ -25,7 +25,7 @@ jobs:
 
       - name: Run Tests
         run: |
-          changed_files=$(git diff --name-only HEAD^ HEAD)
+          changed_files=$(git diff --name-only HEAD~1 HEAD)
           for file in $changed_files; do
             if [[ "$file" == src/code/*/*.py ]]; then
               python "$file"
