@@ -1,1 +1,29 @@
 theme: jekyll-theme-slate
+
+# Site settings
+title: My Awesome Website
+description: This is an awesome website powered by Jekyll.
+author: John Doe
+
+# Build settings
+theme: jekyll-theme-minimal
+
+# Additional settings
+language: en
+timezone: "America/New_York"
+permalink: /:title/
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Navigation menu
+nav_menu:
+  - title: Home
+    url: /
+  - title: About
+    url: /about
+  - title: Blog
+    url: /blog
