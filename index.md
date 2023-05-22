@@ -10,10 +10,10 @@
  - C, C++, C#, Java, Python, GPT model, Data preprocessing, AI
 
 ## Education
- - Degree: Bachelor
- - School: SKKU (Sungkyunkwan University)
- - Majors: software
- - Academic: System programming, Java practice, open source practice... etc
+ - Degree   : Bachelor
+ - School   : SKKU (Sungkyunkwan University)
+ - Majors   : Software
+ - Academic : System programming, Java practice, open source practice... etc
 
 ## Acheievements and Certificaions
  - KOI Award (2018)
@@ -21,5 +21,5 @@
  - Maze Game Solo Development (2019)
 
 ## Contact
- - Email Adress: parkminho@g.skku.edu
- - GitHub link: https://github.com/qwawa
+ - Email Adress : parkminho@g.skku.edu
+ - GitHub link  : https://github.com/qwawa
