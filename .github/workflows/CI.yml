@@ -1,30 +1,24 @@
-# .github/workflows/ci.yml
+name: CI  # Set workflow name: CI
 
-name: CI
+on: # Sets the trigger event for the workflow.
+  push:  # The workflow runs when a push event occurs in the Git repository.
+    branches: [ "main" ] # The workflow runs when an event occurs on the main branch.
+      
+jobs: # Define Jobs in the GitHub Actions workflow
+  build:  # Name the jobs: build
+    runs-on: ubuntu-latest  # Run in Ubuntu's latest version of the running environment
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+    steps: # Define the steps to take in the build
+      - name: Checkout repository  # Name the first step as "Checkout repository"
+        uses: actions/checkout@v3 # Perform repository checkout operations using v3 versions of actions/checkout actions provided by GitHub Actions.
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+      - name: Set up Python  # Name the second step as "Set up Python"
+        uses: actions/setup-python@v3 # Perform Python setup operations Using the v3 version of actions/setup-python actions provided by GitHub Actions.
+        with: # With Keyword for Python Version Setup
+          python-version: 3.x
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: 3.
-
-      - name: Install dependencies
+      - name: Install dependencies  # 종속성 설치 단계
         run: pip install -r requirements.txt
 
-      - name: Run tests
+      - name: Run tests  # 테스트 실행 단계
         run: pytest
