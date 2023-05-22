@@ -1,12 +1,1 @@
-# Site settings
-title: Personal Homepage
-description: This is qwawa's personal homepage
-author: qwawa
-
-# Build settings
 theme: jekyll-theme-slate
-
-# Plugins
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
