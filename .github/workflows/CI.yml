@@ -15,10 +15,10 @@ jobs: # Define Jobs in the GitHub Actions workflow
       - name: Set up Python  # Name the second step as "Set up Python"
         uses: actions/setup-python@v3 # Perform Python setup operations Using the v3 version of actions/setup-python actions provided by GitHub Actions.
         with: # With Keyword for Python Version Setup
-          python-version: 3.x
+          python-version: 3.x # Setting Python Version to 3.x
 
-      - name: Install dependencies  # 종속성 설치 단계
-        run: pip install -r requirements.txt
+      - name: Install dependencies # Name the third step as "Install dependencies"
+        run: pip install -r requirements.txt # Use the pip command to install the dependencies recorded in the requirements.txt file
 
-      - name: Run tests  # 테스트 실행 단계
-        run: pytest
+      - name: Run tests # Name the fourth step as "Run tests"
+        run: pytest # Run the test using the pytest command, test file has it's name started with test_ or finished with _test
