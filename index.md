@@ -22,4 +22,4 @@
 
 ## Contact
  - Email Adress: parkminho@g.skku.edu
- - GitHub link: https://github.com/qwawa
+ - GitHub link: [https://github.com/qwawa](https://github.com/qwawa)
