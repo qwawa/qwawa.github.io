@@ -1,8 +1,8 @@
 name: CI  # Set workflow name: CI
 
-on: # Sets the trigger event for the workflow.
-  push:  # The workflow runs when a push event occurs in the Git repository.
-    branches: [ "main" ] # The workflow runs when an event occurs on the main branch.
+on: # Sets the trigger event for the workflow
+  push:  # The workflow runs when a push event occurs in the Git repository
+    branches: [ "main" ] # The workflow runs when an event occurs on the main branch
       
 jobs: # Define Jobs in the GitHub Actions workflow
   build:  # Name the jobs: build
@@ -10,10 +10,10 @@ jobs: # Define Jobs in the GitHub Actions workflow
 
     steps: # Define the steps to take in the build
       - name: Checkout repository  # Name the first step as "Checkout repository"
-        uses: actions/checkout@v3 # Perform repository checkout operations using v3 versions of actions/checkout actions provided by GitHub Actions.
+        uses: actions/checkout@v3 # Perform repository checkout operations using v3 versions of actions/checkout actions provided by GitHub Actions
 
       - name: Set up Python  # Name the second step as "Set up Python"
-        uses: actions/setup-python@v3 # Perform Python setup operations Using the v3 version of actions/setup-python actions provided by GitHub Actions.
+        uses: actions/setup-python@v3 # Perform Python setup operations Using the v3 version of actions/setup-python actions provided by GitHub Actions
         with: # With Keyword for Python Version Setup
           python-version: 3.x # Setting Python Version to 3.x
 
